@@ -1,16 +1,7 @@
 # spacex_latest_launch
 
-test project
+  ![mainscreen](https://user-images.githubusercontent.com/58954826/115970887-1d261800-a54e-11eb-8511-02e43e58c32a.PNG)  ![mainscreen2](https://user-images.githubusercontent.com/58954826/115970890-20b99f00-a54e-11eb-87b3-5561f0793e0b.PNG)
 
-## Getting Started
+  ![mainscreen3](https://user-images.githubusercontent.com/58954826/115970894-24e5bc80-a54e-11eb-8c53-abf230a84e05.PNG) ![details](https://user-images.githubusercontent.com/58954826/115970895-27481680-a54e-11eb-8d66-9bc7efd6139e.PNG)
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
