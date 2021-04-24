@@ -16,14 +16,5 @@ class SpacexApiService {
     }
   }
 
-  Future<Launch> getName() async {
-    final name =
-        await http.get('https://api.spacexdata.com/v4/launches/latest');
-    if (name.statusCode == 200) {
-      final nameJson = jsonDecode(name.body) as List;
-      return nameJson[19]["name"];
-    } else {
-      throw Exception('Failed to load');
-    }
   }
 }
