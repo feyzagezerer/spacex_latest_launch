@@ -12,7 +12,8 @@ class _AstronautListState extends State<AstronautList> {
     return Scaffold(
       backgroundColor: Color.fromRGBO(255, 255, 255, 50),
       body: Container(
-        height: 140,
+        color: Colors.grey.shade200,
+        height: 130,
         width: double.infinity,
         child: ListView(
           padding: EdgeInsets.all(10),
@@ -90,8 +91,8 @@ Widget astronaut(String imagePath, String logoPath, String link) {
         height: 10,
       ),
       Container(
-        height: 30,
-        width: 75,
+        height: 19,
+        width: 65,
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(15), color: Colors.blue),
         child: Center(

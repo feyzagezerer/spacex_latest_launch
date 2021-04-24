@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:spacex_latest_launch/widgets/astronaut_list.dart';
+import 'package:spacex_latest_launch/widgets/details_widget.dart';
 import 'package:spacex_latest_launch/widgets/image_widget.dart';
 import 'package:spacex_latest_launch/widgets/name_widget.dart';
 
@@ -24,7 +25,7 @@ class _MainScreenState extends State<MainScreen> {
       body: Column(
         children: [
           Flexible(
-            flex: 1,
+            flex: 3,
             child: Container(
               child: ListView(
                 children: <Widget>[
@@ -33,7 +34,7 @@ class _MainScreenState extends State<MainScreen> {
                     children: [
                       Container(
                         width: double.infinity,
-                        height: 330,
+                        height: 300,
                         color: Colors.blue.shade900,
                       ),
                       Column(
@@ -76,22 +77,14 @@ class _MainScreenState extends State<MainScreen> {
           ),
           Flexible(
             flex: 1,
-            child: Container(
-              child: AstronautList(),
-            ),
+            child: AstronautList(),
           ),
+          Flexible(
+            flex: 2,
+            child: DetailsWidget(),
+          )
         ],
       ),
     );
   }
 }
-
-/*
-  havaDurumuGetiriliyor() {
-    return CircularProgressIndicator();
-  }
-
-  havaDurumuGetirHata() {
-    return Text("Data failed to fetch");
-  }
-}*/
