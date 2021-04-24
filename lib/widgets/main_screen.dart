@@ -25,7 +25,7 @@ class _MainScreenState extends State<MainScreen> {
       body: Column(
         children: [
           Flexible(
-            flex: 3,
+            flex: 2,
             child: Container(
               child: ListView(
                 children: <Widget>[
@@ -34,33 +34,30 @@ class _MainScreenState extends State<MainScreen> {
                     children: [
                       Container(
                         width: double.infinity,
-                        height: 300,
+                        height: 250,
                         color: Colors.blue.shade900,
                       ),
                       Column(
                         children: <Widget>[
                           Container(
-                            height: 200,
+                            height: 150,
                             // margin: EdgeInsets.only(top: 30),
                             child: Column(
                               children: <Widget>[
                                 CircleAvatar(
-                                  radius: 100,
+                                  radius: 70,
                                   backgroundColor: Colors.grey.shade200,
                                   child: ImageWidget(),
                                 ),
                               ],
                             ),
                           ),
-                          Padding(
-                            padding: EdgeInsets.all(2),
-                          ),
                           Text(
                             "SpaceX Latest Launch",
                             style: TextStyle(
                                 color: Colors.white,
                                 fontWeight: FontWeight.w500,
-                                fontSize: 30),
+                                fontSize: 22),
                             textAlign: TextAlign.center,
                           ),
                           Padding(

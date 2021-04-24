@@ -15,10 +15,12 @@ class ImageWidget extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 SizedBox(
-                  height: 29,
-                  width: 5,
+                  height: 20,
+                  width: 2,
                 ),
-                Image.network('${snapshot.data.links.patch.small}'),
+                Image.network(
+                  '${snapshot.data.links.patch.small}',
+                ),
               ],
             ),
           );
