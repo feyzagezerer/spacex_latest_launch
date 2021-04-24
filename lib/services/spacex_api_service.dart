@@ -15,6 +15,4 @@ class SpacexApiService {
       throw Exception('Failed to load');
     }
   }
-
-  }
 }
