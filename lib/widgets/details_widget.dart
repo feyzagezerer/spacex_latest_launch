@@ -2,7 +2,7 @@ import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:spacex_latest_launch/models/launch.dart';
 import 'package:spacex_latest_launch/services/spacex_api_service.dart';
-import 'package:youtube_player_flutter/youtube_player_flutter.dart';
+import 'package:spacex_latest_launch/widgets/video_widget.dart';
 
 class DetailsWidget extends StatelessWidget {
   SpacexApiService client = SpacexApiService();
@@ -16,8 +16,10 @@ class DetailsWidget extends StatelessWidget {
           return Container(
             padding: EdgeInsets.all(10),
             child: Card(
+              elevation: 15.0,
               // margin: EdgeInsets.all(0),
               child: ListView(
+                padding: EdgeInsets.only(top: 20.0),
                 scrollDirection: Axis.vertical,
                 children: <Widget>[
                   Container(
@@ -34,31 +36,18 @@ class DetailsWidget extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    height: 5,
+                    height: 10,
                   ),
                   Container(
-                    padding: EdgeInsets.all(5),
-                    child: YoutubePlayer(
-                      controller: YoutubePlayerController(
-                        initialVideoId: '${snapshot.data.links.youtubeId}',
-                        flags: YoutubePlayerFlags(
-                          hideControls: false,
-                          controlsVisibleAtStart: true,
-                          autoPlay: true,
-                          mute: false,
-                        ),
-                      ),
-                      showVideoProgressIndicator: true,
-                      progressIndicatorColor: Colors.blue.shade900,
-                    ),
+                    child: VideoWidget(),
                   ),
                   SizedBox(
-                    height: 5,
+                    height: 10,
                   ),
                   Container(
                     padding: EdgeInsets.fromLTRB(40.0, 0.0, 40.0, 10.0),
                     child: AnimatedButton(
-                      text: 'Details',
+                      text: 'About This Mission',
                       buttonTextStyle: TextStyle(
                         fontWeight: FontWeight.w400,
                         color: Colors.white,

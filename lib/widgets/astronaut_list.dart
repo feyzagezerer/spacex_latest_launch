@@ -88,7 +88,7 @@ Widget astronaut(String imagePath, String logoPath, String link) {
         ],
       ),
       SizedBox(
-        height: 10,
+        height: 15,
       ),
       Container(
         height: 19,

@@ -18,35 +18,27 @@ class VideoWidgetState extends State<VideoWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(),
-      body: FutureBuilder<Launch>(
-          future: client.apiCall(),
-          builder: (context, snapshot) {
-            if (snapshot.hasData) {
-              return Center(
-                child: Container(
-                  width: 10,
-                  height: 5,
-                  child: YoutubePlayer(
-                    controller: YoutubePlayerController(
-                      initialVideoId: '${snapshot.data.links.youtubeId}',
-                      flags: YoutubePlayerFlags(
-                        hideControls: false,
-                        controlsVisibleAtStart: true,
-                        autoPlay: true,
-                        mute: false,
-                      ),
-                    ),
-                    showVideoProgressIndicator: true,
-                    progressIndicatorColor: Colors.blue.shade900,
-                  ),
-                ),
-              );
-            } else {
-              return Center(child: CircularProgressIndicator());
-            }
-          }),
+    return FutureBuilder<Launch>(
+      future: client.apiCall(),
+      builder: (context, snapshot) {
+        if (snapshot.hasData) {
+          return YoutubePlayer(
+            controller: YoutubePlayerController(
+              initialVideoId: '${snapshot.data.links.youtubeId}',
+              flags: YoutubePlayerFlags(
+                hideControls: false,
+                controlsVisibleAtStart: true,
+                autoPlay: true,
+                mute: false,
+              ),
+            ),
+            showVideoProgressIndicator: true,
+            progressIndicatorColor: Colors.blue.shade900,
+          );
+        } else {
+          return Center(child: CircularProgressIndicator());
+        }
+      },
     );
   }
 }
